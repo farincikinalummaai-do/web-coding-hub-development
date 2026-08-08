@@ -1,0 +1,217 @@
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #0b5ed7;
+    --dark-bg: #0f172a;
+    --card-bg: #1e293b;
+    --accent-glow: rgba(13, 110, 253, 0.15);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark-bg);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1e1b4b 100%);
+    color: #fff;
+    padding: 140px 0 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    opacity: 0.25;
+    filter: blur(50px);
+}
+
+.badge-pill {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+/* Feature Cards */
+.service-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--primary-color);
+}
+
+.icon-box {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Tech Badges */
+.tech-badge {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin: 4px;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+    background-color: var(--dark-bg);
+}
+
+.portfolio-item img {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.4;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Team Cards */
+.team-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.team-img-wrapper {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    background-color: var(--dark-bg);
+}
+
+.team-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.team-role-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(4px);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--dark-bg);
+    color: #fff;
+}
+
+.form-control {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #fff;
+    padding: 12px 16px;
+}
+
+.form-control:focus {
+    background-color: #1e293b;
+    border-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 0 0 0.25rem var(--accent-glow);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+footer {
+    background-color: #090d16;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    height: 38px;
+    object-fit: contain;
+}
